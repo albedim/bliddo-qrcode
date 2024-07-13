@@ -1,5 +1,9 @@
 {
   "name": "bliddo-qrcode",
+  "homepage": "https://bliddo.com",
+  "repository": {
+    "url": "github.com/albedim/bliddo-qrcode"
+  },
   "version": "1.0.0",
   "description": "This project is created by bliddo.com and provides a set of comments you can use to create QRCodes in your code and track their traffic and usage.",
   "main": "./dist/index.js",
