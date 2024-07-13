@@ -2,9 +2,9 @@
   "name": "bliddo-qrcode",
   "homepage": "https://bliddo.com",
   "repository": {
-    "url": "github.com/albedim/bliddo-qrcode"
+    "url": "https://github.com/albedim/bliddo-qrcode"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This project is created by bliddo.com and provides a set of comments you can use to create QRCodes in your code and track their traffic and usage.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -26,8 +26,10 @@
   "dependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-qrcode": "^0.3.6",
     "rollup": "^4.18.1",
     "tsup": "^8.1.0",
     "typescript": "^5.5.3"
