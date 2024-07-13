@@ -3,9 +3,9 @@ export interface BliddoQRCodeProps {
     bgColor?: string
     fgColor?: string
     /**
-     * The id of the qr code you want to track, 
-     * make sure you created it on bliddo.com and copied the id on our website 
-     * before using this component.
+     * The key of the qr code you want to track. 
+     * Go to our website (bliddo.com) to create your trackable
+     * qr code and get the dev key to start using it in your code.
      */
-    qrCodeId: string
+    qrCodeDevKey: string
 }

@@ -7,16 +7,16 @@ import { BASE_URL } from "../../utils";
 export const BliddoQRCode: React.FC<BliddoQRCodeProps> = ( props ) => {
 
   const [qrCodeFlowUrl, setQrCodeFlowUrl] = useState<string>("")
-  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const getCode = async () => {
-    await axios.get(BASE_URL + `/qrcodes/${props.qrCodeId}`)
+    await axios.get('https://bliddo.pythonanywhere.com/qrcodes/' + props.qrCodeDevKey)
     .then(res => {
-      setQrCodeFlowUrl(res.data.flowUrl)
+      setQrCodeFlowUrl(res.data.param.flow_url)
       setIsLoading(false)
     })
     .catch(err => {
-      throw new Error(err.response.data.error.message)
+      throw new Error("An error occurred while fetching the qr code")
     })
   }
 
@@ -25,15 +25,17 @@ export const BliddoQRCode: React.FC<BliddoQRCodeProps> = ( props ) => {
   }, [])
 
   if (isLoading) {
-    return null
+    return <div>Loading...</div>
   }
-  
+
   return (
-    <QRCode
-      value={qrCodeFlowUrl}
-      size={props.size || 400}
-      bgColor={props.bgColor || "white"}
-      fgColor={props.fgColor || "black"}
-    />
+    <div>
+      <QRCode
+        value={qrCodeFlowUrl}
+        size={props.size}
+        bgColor={props.bgColor}
+        fgColor={props.fgColor}
+      />
+    </div>
   )
 }
