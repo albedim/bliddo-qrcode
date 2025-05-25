@@ -1,3 +1,7 @@
+> ⚠️ **Disclaimer**
+>
+> This repository is no longer maintained, as **@bliddo** is no longer an active company.
+
 # What is Bliddo?
 Track the traffic and usage of your QR codes.
 Unlock the power of instant analytics with our innovative QR code creation and tracking platform. 
